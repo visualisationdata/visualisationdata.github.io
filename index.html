@@ -46,12 +46,12 @@
                 <div id="content-area">
                   <div data-ex-role="exhibit-controlPanel" data-ex-developer-mode="true" data-ex-hover-reveal="true"></div>
                     <div class="item" data-ex-role="exhibit-lens" data-ex-item-types="Senator" style="display: none">
-                        <h3><a data-ex-href-content=".homepage"><span data-ex-content=".label"></span> (<span data-ex-content=".party"></span>-<span data-ex-content=".state"></span>)</a></h3>
-                        <div><strong>Committees:</strong> <span data-ex-content=".committeeMember.label"></span></div>
+                        <h3><a data-ex-href-content=".nom"><span data-ex-content=".format"></span> (<span data-ex-content=".present"></span>-<span data-ex-content=".source"></span>)</a></h3>
+                        <div><strong>Committees:</strong> <span data-ex-content=".nom.format"></span></div>
                         <span data-ex-if-exists="!sponsor.description"><div><strong>Bills (yesterday):</strong> <span data-ex-content="!sponsor.description"></span></div></span>
                     </div>
                     <div class="item" data-ex-role="exhibit-lens" data-ex-item-types="Bill" style="display: none">
-                        <p><span data-ex-content=".description"></span></p>
+                        <p><span data-ex-content=".nom"></span></p>
                         <p>Referred to: <span data-ex-content=".inCommittee"></span></p>
                         <p>Sponsored by <span data-ex-content=".sponsor"></span>; <span data-ex-content=".cosponsor"></span></p>
                         <p><a data-ex-href-content=".billHomepage">Read the bill</a></p>
@@ -65,8 +65,8 @@
                         <div data-ex-role="exhibit-view"
                             data-ex-view-class="Exhibit.TabularView"
                             data-ex-label="Table"
-                            data-ex-columns=".label, .party, .state, .committeeMember.label, !sponsor, !cosponsor"
-                            data-ex-column-labels="name, party, state, member of, sponsored, cosponsored"
+                            data-ex-columns=".nom, .present, .state, .committeeMember.label, !sponsor, !cosponsor"
+                            data-ex-column-labels="type, party, state, member of, sponsored, cosponsored"
                             data-ex-column-formats="list, list, list, list"
                             data-ex-sort-column="4"
                             data-ex-sort-ascending="false"
