@@ -10,36 +10,20 @@
 
 </head>
 <body>
-<h1>Feb. 2: The Battle for Tahrir Square</h1>
+<h1>Soutien fabrique</h1>
 <!-- <h2></h2> -->
-<div data-ex-role="view" data-ex-label="List"></div>
-
-
-                        <div ex:role="exhibit-view"
-                            ex:viewClass="Exhibit.TabularView"
-                            ex:label="Table"
-                            ex:columns=".richesse, .party, .state, .committeeMember.label, !sponsor, !cosponsor"
-                            ex:columnLabels="richesse, party, state, member of, sponsored, cosponsored"
-                            ex:columnFormats="list, list, list, list"
-                            ex:sortColumn="4"
-                            ex:sortAscending="false"
-                            ex:rowStyler="rowStyler"
-                            ></div>
-                        <div ex:role="exhibit-view"
-                             ex:viewClass="Map"
-                             ex:label="Map"
-                             ex:latlng=".stateLatLng"
-                             ex:latlngPairSeparator=","
-                             ex:colorKey=".party"
-                             ex:colorCoder="party-colors"
-                             ex:center="38.479394673276445, -95.361328125"
-                             ex:zoom="3"
-                             ></div>
-                        <div ex:role="exhibit-view"
-                            ex:label="Tiles"
-                            ex:paginate="true"
-                          ></div>
-                        </div>
+<div ex:role="view" ex:viewClass="Tabular"
+  ex:columns=".from, .to, .intitule, .richesse, .statut" > 
+	<table style="display: none;"> 
+		<tr> 
+			<td><span ex:content=".from"></span></td> 
+			<td><span ex:content=".to"></span></td> 
+			<td><span ex:content=".intitule"></span></td> 
+			<td><span ex:content=".richesse"></span></td> 
+			<td><span ex:content=".statut"></span></td> 
+		</tr> 
+	</table> 
+</div> 
 
 
 </body>
